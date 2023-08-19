@@ -3,7 +3,6 @@
   "parser": "babel-eslint",
 
   "parserOptions": {
-    "ecmaVersion": 8,
     "sourceType": "module"
   },
 
@@ -13,7 +12,6 @@
       "allowBlockStart": true,
       "allowObjectStart": true,
       "allowArrayStart": true,
-      "ignorePattern": "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<|==========================================="
     }],
     "arrow-parens": [2, "as-needed", {
       "requireForBlockBody": true
@@ -51,11 +49,5 @@
     "no-useless-escape": 0,                       // Slows down regex development
     "import/no-absolute-path": 0,                 // Doesn't make sense for Meteor /imports folder
     "linebreak-style": 0
-  },
-
-  "settings": {
-    "import/resolver": "meteor",
-    "import/core-modules": [ "meteor/meteor" ],
-    "import/no-extraneous-dependencies": "off"
   }
 }
