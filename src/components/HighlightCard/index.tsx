@@ -19,7 +19,7 @@ const HighlightCard: React.FC<Props> = ({
   amount,
   lastTransaction,
   type
-}: Props) => {
+}) => {
   return (
     <S.Container type={type}>
       <S.Header>
