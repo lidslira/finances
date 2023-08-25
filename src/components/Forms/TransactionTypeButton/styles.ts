@@ -48,7 +48,7 @@ export const Icon = styled(Feather)<IconProps>`
   font-size: ${RFValue(24)}px;
   margin-right: 12px;
 
-  color: ${({ theme, type, isActive }) =>
+  color: ${({ theme, type }) =>
     type === 'up' ? theme.colors.success : theme.colors.attention
   };
 

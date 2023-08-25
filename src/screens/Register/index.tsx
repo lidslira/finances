@@ -4,6 +4,7 @@ import * as S from './styles';
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
 import TransactionTypeButton from '../../components/Forms/TransactionTypeButton';
+import CategorySelect from '../../components/Forms/CategorySelect';
 
 const Register: React.FC = () => {
 const [transactionType, setTransactionType] = React.useState('' as 'up' | 'down' | '');
@@ -37,6 +38,8 @@ const [transactionType, setTransactionType] = React.useState('' as 'up' | 'down'
               isActive={transactionType === 'down'}
             />
           </S.TransactionsTypes>
+
+          <CategorySelect title="Categoria" />
 
         </S.Fields>
 
