@@ -11,13 +11,8 @@ interface Category {
   name: string;
 }
 
-interface CategoryProps extends Category{
-  icon: string;
-  color: string;
-}
-
 interface Props {
-  category: string;
+  category: Category;
   setCategory: (name: Category) => void;
   closeSelectCategory: () => void;
 }
@@ -35,9 +30,12 @@ const CategorySelect: React.FC<Props> = ({
       <FlatList
         style={{ flex: 1, width: '100%' }}
         data={categories}
-        keyExtractor={(item: CategoryProps) => item.key}
+        keyExtractor={(item) => item.key}
         renderItem={({ item }) => (
-          <S.Category>
+          <S.Category
+            onPress={() => setCategory(item)}
+            isActive={category.key === item.key}
+          >
             <S.Icon name={item.icon} />
             <S.Name>{item.name}</S.Name>
           </S.Category>
@@ -46,7 +44,7 @@ const CategorySelect: React.FC<Props> = ({
       />
 
       <S.Footer>
-        <Button title="Selecionar" />
+        <Button title="Selecionar" onPress={closeSelectCategory}/>
       </S.Footer>
       
     </S.Container>
