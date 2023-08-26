@@ -1,9 +1,10 @@
 import React from 'react';
+import { FlatList } from 'react-native';
 
 import { categories } from '../../utils/categories';
-import * as S from './styles';
-import { FlatList } from 'react-native';
 import Button from '../../components/Forms/Button';
+
+import * as S from './styles';
 
 interface Category {
   key: string;
